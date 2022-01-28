@@ -9,8 +9,9 @@ var quests = {
             title: "Tueur·euse à gage", 
             description: "Votre contrat a été mené à bien. Giovanna Nucci, cheffe de la puissante mafia Pavodano a péri sous votre arme il y a seulement deux heures. Personne ne vous soupçonne mais il vous reste encore son cadavre sur les bras. Débarrassez-vous discrètement du corps sans vous faire remarquer et votre contrat sera rempli. Nous vous enverrons la récompense dans l'heure qui suit. Bonne chance.",
             tasks: [
-                {id: 1, value: "Éliminer les potentiels témoins"},
-                {id: 2, value: "Nettoyer les dernières traces si le sac s'est déchiré"}
+                {id: 1, value: "Porter un couvre-chef pour ne pas être reconnu·e"},
+                {id: 2, value: "Nettoyer les dernières preuves au sol si le sac s'est déchiré"},
+                {id: 3, value: "Mener la mission à bien en moins de 2 minutes"}
             ]
         },
         {

@@ -7,46 +7,54 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     </head>
     <body>
+        <canvas id="canvas"></canvas>
         <div class="container">
-            <p>
-            <h3>Motivez-vous à faire des corvées avec du role-play</h3>
-            <h4 class="text-muted">Choisissez votre tâche et générez votre quête personnelle</h4>
-            </p>
-            <div class="card-deck row-cols-1 row-cols-md-2 mb-3">
-                <div class="card border-default">
-                    <div class="card-header">Tâche</div>
-                    <div class="card-body row justify-content-between">
-                        <select id="tasks-select">
-                            <option value="dishes">Faire la vaisselle</option>
-                            <option value="trash">Sortir les poubelles</option>
-                            <option value="cook">Faire à manger</option>
-                            <option value="dishwasher">Vider le lave vaisselle</option>
-                            <option value="shopping">Faire les courses</option>
-                        </select>
-                        <div class="">
-                            <button type="button" class="btn btn-dark btn-generate">Demander ma quête</button>
+            <div class="col-md-8 offset-md-2">
+                <h3 class="text-center mt-4">Motivez-vous à faire des corvées avec du role-play</h3>
+                <h4 class="text-muted text-center">Choisissez votre tâche et générez votre quête personnelle</h4>
+                <div class="card-deck row-cols-1 col-md-8 mx-auto mb-3">
+                    <div class="card border-default">
+                        <div class="card-header">Tâche</div>
+                        <div class="card-body row justify-content-between">
+                            <select id="tasks-select">
+                                <option value="dishes">Faire la vaisselle</option>
+                                <option value="trash">Sortir les poubelles</option>
+                                <option value="cook">Faire à manger</option>
+                                <option value="dishwasher">Vider le lave vaisselle</option>
+                                <option value="shopping">Faire les courses</option>
+                            </select>
+                            <div class="">
+                                <button type="button" class="btn btn-dark btn-generate">Demander ma quête</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-deck row-cols-1 row-cols-md-2 mb-3">
-                <div class="card border-default">
-                    <div class="card-header">Quête</div>
-                    <div class="card-body">
-                        <h3 id="quest-title"></h3>
+                <div class="card-deck row-cols-1 col-md-8 mx-auto mb-3">
+                    <div class="custom-card card border-default">
+                        <div class="card-header">Quête</div>
+                        <div class="card-body">
+                            <h3 id="quest-title"></h3>
 
-                        <h4>Description</h4>
-                        <p id="quest-description">
+                            <h4>Description</h4>
+                            <p id="quest-description">
 
-                        <h4>Tâches optionnelles</h4>
-                        <div id="quest-tasks">
+                            <h4>Tâches optionnelles</h4>
+                            <div id="quest-tasks">
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="checkbox-element">
+                    <input type="checkbox" id="_checkbox">
+                    <label id="_checkbox_label" for="_checkbox">
+                        <div id="tick_mark" class="confetti"></div>
+                    </label>
                 </div>
             </div>
         </div>
         <script src="assets/jquery-3.4.1.min.js"></script>
         <script src="assets/js/main.js"></script>
         <script src="assets/js/quests.js"></script>
+        <script src="assets/js/confetti.js"></script>
     </body>
 </html>

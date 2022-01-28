@@ -1,16 +1,22 @@
 $(document).ready(function() {
     $('.btn-generate').click(function(){
-        $("#quest-tasks").html("");
-        // $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+        clear_data();
+
         var irl_task = $("#tasks-select").val();
         var quest = quests[irl_task].random();
         
-        document.getElementById('quest-title').innerHTML = quest.title;
-        document.getElementById('quest-description').innerHTML = quest.description;
-        generate_tasks_html(quest.tasks);
+        $("#quest-title").append(quest.title);
+        $("#quest-description").append(quest.description);
+        $("#quest-tasks").append(generate_tasks_html(quest.tasks));
         // var loadingMessage = loading_list.random();
     });
 });
+
+function clear_data(){
+    $("#quest-title").html("");
+    $("#quest-description").html("");
+    $("#quest-tasks").html("");
+}
 
 function generate_tasks_html(tasks){
     var htmlAttr = "";
@@ -32,7 +38,7 @@ function generate_tasks_html(tasks){
         loops++;
     }
 
-    $("#quest-tasks").append(htmlAttr);
+    return htmlAttr;
 }
 
 Array.prototype.random = function () {
